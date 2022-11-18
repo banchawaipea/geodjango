@@ -134,9 +134,21 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-# เพิ่มใหม่
+# ******* Deploy settings *******
+# if DEBUG:
+#     STATICFILES_DIRS = [Path.joinpath(BASE_DIR, 'static')]
+# else:
+#     STATIC_ROOT = Path.joinpath(BASE_DIR, 'static')
+
+# ******* End Deploy settings *******
+
+
+# ******* Dev settings *******
+#เพิ่มใหม่
 STATICFILES_DIRS = [Path.joinpath(BASE_DIR, 'static')]
-STATIC_ROOT = Path.joinpath(BASE_DIR, 'staticfiles')
+# For DEV
+STATIC_ROOT = Path.joinpath(BASE_DIR, 'staticfiles') 
+# ******* End Dev settings *******
 
 #เพิ่มใหม่
 MEDIA_ROOT = Path.joinpath(BASE_DIR, 'media')
